@@ -1,10 +1,15 @@
-
-def check_guess(guess, word):
-    guess = guess.lower()  # Convert guess to lowercase
-    if guess in word:
-        print(f"Good guess!, {guess} is in the word")
+def check_guess(self, guess):
+    guess = guess.lower()  
+    if guess in self.word:  
+        print(f"Good guess! {guess} is in the word.")
+        for i, letter in enumerate(self.word):
+            if letter == guess:
+                self.word_guessed[i] = guess
+        self.num_letters -= 1
     else:
-        print(f"Sorry, {guess} is not in the word. Try again.")
+        print(f"Sorry, {letter} is not in the word.")
+        print(f"you have {num_lives} left")
+        self.num_lives -= 1
 
 
 #INPUT AND CHECKING IF INPUT IS A VALID GUESS
