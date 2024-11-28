@@ -1,3 +1,6 @@
+
+#CHECK IF GUESS IS IN RANDOMLY SELECTED WORD & PRINT STATEMENTS
+
 def check_guess(self, guess):
     guess = guess.lower()  
     if guess in self.word:  
@@ -13,6 +16,7 @@ def check_guess(self, guess):
 
 
 #INPUT AND CHECKING IF INPUT IS A VALID GUESS
+
 def ask_for_input(word):
     while True:
         guess = input("Guess a letter: ")  

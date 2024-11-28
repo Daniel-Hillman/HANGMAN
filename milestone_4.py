@@ -1,5 +1,7 @@
 import random
 
+# DEFINING THE HANGMAN GAME CLASS
+
 class Hangman:
     def __init__(self, word_list, num_lives=5):
         self.word = random.choice(word_list)
