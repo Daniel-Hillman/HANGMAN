@@ -11,19 +11,19 @@ def check_guess(self, guess):
         self.num_letters -= 1
     else:
         print(f"Sorry, {letter} is not in the word.")
-        print(f"you have {num_lives} left")
+        print(f"you have {self.num_lives} left")
         self.num_lives -= 1
 
 
 #INPUT AND CHECKING IF INPUT IS A VALID GUESS
 
-def ask_for_input(word):
+def ask_for_input(self):
     while True:
         guess = input("Guess a letter: ")  
         if len(guess) == 1 and guess.isalpha():  
-            check_guess(guess)  
+            self.check_guess(guess)  
             break  
         else:
             print("Invalid letter. Please, enter a single alphabetical character.")
 
-ask_for_input(word)
+ask_for_input(self.word)
